@@ -8,7 +8,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #fff; background: #1a1a1a; }
         .hero { background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); padding: 80px 20px 60px; text-align: center; border-bottom: 4px solid #3498db; position: relative; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,%3Csvg width="100" height="100" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 0h100v100H0z" fill="none"/%3E%3Cpath d="M50 10L90 90H10z" fill="%23ffffff" opacity="0.03"/%3E%3C/svg%3E') repeat; opacity: 0.1; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.1; }
         .hero-content { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; }
         .event-title { font-size: 3.5em; font-weight: 800; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
         .event-subtitle { font-size: 1.3em; color: #ecf0f1; margin-bottom: 20px; font-weight: 300; }
@@ -41,4 +41,200 @@
         .prize-card { background: #2c3e50; border-radius: 10px; padding: 30px; text-align: center; border-top: 5px solid #3498db; }
         .prize-card h3 { font-size: 1.6em; margin-bottom: 20px; color: #3498db; }
         .prize-item { background: #34495e; padding: 15px; margin: 10px 0; border-radius: 8px; color: #ecf0f1; font-size: 1.05em; }
-        .prize-pool-banner { background: linear-gradient(135deg, #3498db, #2980b9); padding: 25px; border-radius: 10px; margin-
+        .prize-pool-banner { background: linear-gradient(135deg, #3498db, #2980b9); padding: 25px; border-radius: 10px; margin-bottom: 30px; text-align: center; font-size: 1.2em; font-weight: 600; }
+        .registration-box { background: #2c3e50; border-radius: 10px; padding: 40px; text-align: center; margin: 30px 0; }
+        .registration-box h3 { font-size: 2em; color: #3498db; margin-bottom: 20px; }
+        .registration-box p { color: #bdc3c7; font-size: 1.1em; line-height: 1.8; margin: 15px 0; }
+        .register-button { display: inline-block; background: #3498db; color: white; padding: 18px 50px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.2em; margin-top: 20px; transition: all 0.3s; text-transform: uppercase; letter-spacing: 1px; }
+        .register-button:hover { background: #2980b9; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4); }
+        footer { background: #2c3e50; color: #95a5a6; text-align: center; padding: 30px 20px; margin-top: 60px; border-top: 3px solid #3498db; }
+        @media (max-width: 768px) {
+            .event-title { font-size: 2em; }
+            .event-date { font-size: 1.1em; padding: 12px 30px; }
+            .nav-item { padding: 15px 20px; font-size: 0.95em; }
+            .section-header { font-size: 1.8em; }
+            .course-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="event-title">CFP Invitational</h1>
+            <p class="event-subtitle">2nd Annual • North Carolina's Premier Multi-Course Tournament</p>
+            <p class="event-subtitle">101 Tournament Holes</p>
+            <div class="event-date">MARCH 13-15, 2026</div>
+            <p style="font-style: italic; margin-top: 30px; font-size: 1.1em; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.9;">
+                "You've all probably had people in your life tell you you can't play 100 holes of disc golf in a day. This is your chance to prove them wrong."
+                <br><span style="font-size: 0.9em; opacity: 0.8;">— Cameron F. Pierce</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-item active" onclick="showSection('schedule')">Schedule</div>
+            <div class="nav-item" onclick="showSection('format')">Format</div>
+            <div class="nav-item" onclick="showSection('prizes')">Prizes</div>
+            <div class="nav-item" onclick="showSection('registration')">Registration</div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- SCHEDULE -->
+        <section id="schedule" class="content-section active">
+            <h2 class="section-header">Tournament Schedule</h2>
+
+            <!-- DAY 1 -->
+            <div class="day-card">
+                <h3 class="day-title">Day 1 • Friday, March 13</h3>
+                <p class="day-subtitle">Practice Day (Optional)</p>
+                <div class="info-badge">NOT INCLUDED IN TOURNAMENT SCORING</div>
+                <div class="course-grid">
+                    <div class="course-card">
+                        <h4 class="course-name">Bethel Methodist</h4>
+                        <div class="course-stats">12 holes • Par 36 • 3,089 ft<br>Rolling elevation • Wooded</div>
+                        <a href="https://app.udisc.com/applink/course/6444?tab=info" class="course-link" target="_blank">View Course Info →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 2 -->
+            <div class="day-card">
+                <h3 class="day-title">Day 2 • Saturday, March 14</h3>
+                <p class="day-subtitle">Tournament Day • 101 Holes</p>
+                <div class="course-grid">
+                    <div class="course-card">
+                        <h4 class="course-name">Crossnore</h4>
+                        <div class="course-stats">9 holes • Par 27 • 1,907 ft<br>Elevation changes • Beginner-friendly</div>
+                        <a href="https://app.udisc.com/applink/course/41013?tab=info" class="course-link" target="_blank">View Course Info →</a>
+                    </div>
+                    <div class="course-card">
+                        <h4 class="course-name">Jack Warren Park</h4>
+                        <div class="course-stats">18 holes • Par 54 • 2,312 ft<br>Minimal elevation • Pitch-and-putt style</div>
+                        <a href="https://app.udisc.com/applink/course/44441?tab=info" class="course-link" target="_blank">View Course Info →</a>
+                    </div>
+                    <div class="course-card">
+                        <h4 class="course-name">Sunrise</h4>
+                        <div class="course-stats">18 holes • Par 55 • 4,008 ft<br>Elevation changes • Wooded</div>
+                        <a href="https://app.udisc.com/applink/course/22013?tab=info" class="course-link" target="_blank">View Course Info →</a>
+                    </div>
+                </div>
+                <div class="break-notice">Lunch Break</div>
+                <div class="course-grid">
+                    <div class="course-card">
+                        <h4 class="course-name">Davie</h4>
+                        <div class="course-stats">20 holes • Par 70 • 6,941 ft<br>Rolling elevation • Wooded</div>
+                        <a href="https://app.udisc.com/applink/course/27728?tab=info" class="course-link" target="_blank">View Course Info →</a>
+                    </div>
+                    <div class="course-card">
+                        <h4 class="course-name">Little Davie</h4>
+                        <div class="course-stats">18 holes • Par 64 • 5,632 ft<br>Minimal elevation • Mostly wooded</div>
+                        <a href="https://app.udisc.com/applink/course/44244?tab=info" class="course-link" target="_blank">View Course Info →</a>
+                    </div>
+                    <div class="course-card">
+                        <h4 class="course-name">Patriot</h4>
+                        <div class="course-stats">18 holes • Red: Par 54, 5,040 ft<br>Blue: Par 60, 7,061 ft • Rolling elevation</div>
+                        <a href="https://app.udisc.com/applink/course/5793?tab=info" class="course-link" target="_blank">View Course Info →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 3 -->
+            <div class="day-card">
+                <h3 class="day-title">Day 3 • Sunday, March 15</h3>
+                <p class="day-subtitle">Recovery Day (Optional)</p>
+                <div class="info-badge">NOT INCLUDED IN TOURNAMENT SCORING</div>
+                <div class="course-grid">
+                    <div class="course-card">
+                        <h4 class="course-name">Neatman Creek</h4>
+                        <div class="course-stats">18 holes • Par 61 • 5,670 ft<br>Extreme elevation • Private course<br>4.8/5 rating • Top-20 worldwide</div>
+                        <a href="https://app.udisc.com/applink/course/30855?tab=info" class="course-link" target="_blank">View Course Info →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMAT -->
+        <section id="format" class="content-section">
+            <h2 class="section-header">Tournament Format</h2>
+            <div class="format-card">
+                <h3 class="format-title">Warmup</h3>
+                <div class="format-details"><strong>Crossnore</strong> - 9 holes<br>Format: Practice Round</div>
+            </div>
+            <div class="format-card">
+                <h3 class="format-title">Individual Competition</h3>
+                <div class="format-details"><strong>Jack Warren Park</strong> - 18 holes<br>Format: Match Play with Ace Pot</div>
+                <div class="format-details"><strong>Sunrise</strong> - 18 holes<br>Format: Stroke Play</div>
+            </div>
+            <div class="format-card">
+                <h3 class="format-title">Team Competition</h3>
+                <div class="format-details" style="font-style: italic; margin-bottom: 15px;">Teams are set based on individual standings</div>
+                <div class="format-details"><strong>Davie</strong> - 20 holes<br>Format: Best Disc</div>
+                <div class="format-details"><strong>Little Davie</strong> - 18 holes<br>Format: Stroke Play</div>
+            </div>
+            <div class="format-card">
+                <h3 class="format-title">Final Round</h3>
+                <div class="format-details"><strong>Patriot</strong> - 18 holes<br>Format: TBD (Best Disc from long tees OR Stroke Play from short tees)</div>
+            </div>
+        </section>
+
+        <!-- PRIZES -->
+        <section id="prizes" class="content-section">
+            <h2 class="section-header">Tournament Prizes</h2>
+            <div class="prize-pool-banner">Prize Pool: Premium and special edition CFP stamped discs</div>
+            <div class="prize-grid">
+                <div class="prize-card">
+                    <h3>Individual Prizes</h3>
+                    <div class="prize-item"><strong>1st Place</strong> - First pick from prize pool</div>
+                    <div class="prize-item"><strong>2nd Place</strong> - Second pick from prize pool</div>
+                    <div class="prize-item"><strong>3rd Place</strong> - Third pick from prize pool</div>
+                </div>
+                <div class="prize-card">
+                    <h3>Team Prize</h3>
+                    <div class="prize-item"><strong>Winning Team</strong><br>Custom mini markers for each team member</div>
+                </div>
+                <div class="prize-card">
+                    <h3>Ace Pots</h3>
+                    <div class="prize-item">Jack Warren</div>
+                    <div class="prize-item">Overall</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REGISTRATION -->
+        <section id="registration" class="content-section">
+            <h2 class="section-header">Registration</h2>
+            <div class="registration-box">
+                <h3>Register for the Tournament</h3>
+                <p>Registration is now open for the 2nd Annual CFP Invitational!</p>
+                <p>Complete the registration form to secure your spot.</p>
+                <p><strong>Questions?</strong> Contact the tournament director for more information.</p>
+                <a href="https://forms.gle/ae4ZJi8psJui6hTW7" class="register-button" target="_blank">Register Now</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 CFP Invitational | North Carolina Disc Golf</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.classList.remove('active'));
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => item.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+            event.target.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
